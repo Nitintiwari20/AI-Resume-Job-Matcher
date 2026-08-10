@@ -1,0 +1,84 @@
+{
+  "categories": {
+    "Programming Languages": [
+      {"name": "Python", "aliases": ["python", "py", "python3"], "resources": {"course": "Python Bootcamp by Angela Yu", "doc": "https://docs.python.org/3/"}},
+      {"name": "JavaScript", "aliases": ["js", "javascript", "ecmascript"], "resources": {"course": "The Complete JS Course by Jonas Schmedtmann", "doc": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"}},
+      {"name": "TypeScript", "aliases": ["ts", "typescript"], "resources": {"course": "Understanding TypeScript - Udemy", "doc": "https://www.typescriptlang.org/docs/"}},
+      {"name": "Java", "aliases": ["java", "core java", "java EE"], "resources": {"course": "Java Programming Masterclass", "doc": "https://docs.oracle.com/en/java/"}},
+      {"name": "C++", "aliases": ["cpp", "c++", "c plus plus"], "resources": {"course": "C++ Nanodegree Udacity", "doc": "https://en.cppreference.com/"}},
+      {"name": "C#", "aliases": ["csharp", "c#"], "resources": {"course": "C# Basics for Beginners", "doc": "https://learn.microsoft.com/en-us/dotnet/csharp/"}},
+      {"name": "Go", "aliases": ["golang", "go"], "resources": {"course": "Go: The Complete Developer's Guide", "doc": "https://go.dev/doc/"}},
+      {"name": "Rust", "aliases": ["rust", "rustlang"], "resources": {"course": "The Rust Programming Language Book", "doc": "https://doc.rust-lang.org/book/"}},
+      {"name": "SQL", "aliases": ["sql", "structured query language"], "resources": {"course": "Complete SQL Bootcamp", "doc": "https://www.sqltutorial.org/"}},
+      {"name": "PHP", "aliases": ["php"], "resources": {"course": "PHP for Beginners", "doc": "https://www.php.net/manual/"}},
+      {"name": "Ruby", "aliases": ["ruby"], "resources": {"course": "Ruby Programming", "doc": "https://www.ruby-lang.org/en/documentation/"}},
+      {"name": "Kotlin", "aliases": ["kotlin"], "resources": {"course": "Kotlin for Android", "doc": "https://kotlinlang.org/docs/"}},
+      {"name": "Swift", "aliases": ["swift"], "resources": {"course": "iOS Development with Swift", "doc": "https://swift.org/documentation/"}}
+    ],
+    "Frontend Frameworks & Libraries": [
+      {"name": "React", "aliases": ["react", "react.js", "reactjs"], "resources": {"course": "React - The Complete Guide", "doc": "https://react.dev/"}},
+      {"name": "Next.js", "aliases": ["next.js", "nextjs", "next"], "resources": {"course": "Next.js 14 Complete Mastery", "doc": "https://nextjs.org/docs"}},
+      {"name": "Vue.js", "aliases": ["vue", "vue.js", "vuejs"], "resources": {"course": "Vue - The Complete Guide", "doc": "https://vuejs.org/guide/introduction.html"}},
+      {"name": "Angular", "aliases": ["angular", "angular.js", "angularjs"], "resources": {"course": "Angular - The Complete Guide", "doc": "https://angular.io/docs"}},
+      {"name": "HTML5", "aliases": ["html", "html5"], "resources": {"course": "HTML5 & CSS3 Masterclass", "doc": "https://developer.mozilla.org/en-US/docs/Web/HTML"}},
+      {"name": "CSS3", "aliases": ["css", "css3"], "resources": {"course": "CSS - The Complete Guide", "doc": "https://developer.mozilla.org/en-US/docs/Web/CSS"}},
+      {"name": "Tailwind CSS", "aliases": ["tailwind", "tailwindcss"], "resources": {"course": "Tailwind CSS from Scratch", "doc": "https://tailwindcss.com/docs"}},
+      {"name": "Bootstrap", "aliases": ["bootstrap", "bootstrap5"], "resources": {"course": "Bootstrap 5 Responsive Web Design", "doc": "https://getbootstrap.com/docs/"}},
+      {"name": "Redux", "aliases": ["redux", "redux toolkit", "rtk"], "resources": {"course": "Modern Redux with RTK Query", "doc": "https://redux-toolkit.js.org/"}},
+      {"name": "Sass/SCSS", "aliases": ["sass", "scss"], "resources": {"course": "Advanced CSS and Sass", "doc": "https://sass-lang.com/documentation/"}}
+    ],
+    "Backend & APIs": [
+      {"name": "Node.js", "aliases": ["node", "node.js", "nodejs"], "resources": {"course": "Node.js Developer Course", "doc": "https://nodejs.org/en/docs/"}},
+      {"name": "Express.js", "aliases": ["express", "express.js", "expressjs"], "resources": {"course": "Just Express - Node.js", "doc": "https://expressjs.com/"}},
+      {"name": "FastAPI", "aliases": ["fastapi", "fast api"], "resources": {"course": "FastAPI - Modern Python Web Framework", "doc": "https://fastapi.tiangolo.com/"}},
+      {"name": "Django", "aliases": ["django", "django rest framework", "drf"], "resources": {"course": "Python Django Web Development", "doc": "https://docs.djangoproject.com/"}},
+      {"name": "Flask", "aliases": ["flask"], "resources": {"course": "REST APIs with Flask & Python", "doc": "https://flask.palletsprojects.com/"}},
+      {"name": "Spring Boot", "aliases": ["spring", "spring boot", "springboot", "java spring"], "resources": {"course": "Spring Boot 3 Masterclass", "doc": "https://spring.io/projects/spring-boot"}},
+      {"name": "GraphQL", "aliases": ["graphql", "apollo graphql"], "resources": {"course": "GraphQL with React & Node", "doc": "https://graphql.org/learn/"}},
+      {"name": "RESTful APIs", "aliases": ["rest api", "restful api", "rest", "restful"], "resources": {"course": "API Design Best Practices", "doc": "https://restfulapi.net/"}},
+      {"name": "gRPC", "aliases": ["grpc"], "resources": {"course": "gRPC Master Class", "doc": "https://grpc.io/docs/"}},
+      {"name": "Microservices", "aliases": ["microservices", "microservice architecture"], "resources": {"course": "Microservices Architecture Patterns", "doc": "https://microservices.io/"}}
+    ],
+    "Databases & Caching": [
+      {"name": "PostgreSQL", "aliases": ["postgres", "postgresql", "pg"], "resources": {"course": "PostgreSQL Bootcamp", "doc": "https://www.postgresql.org/docs/"}},
+      {"name": "MySQL", "aliases": ["mysql", "my sql"], "resources": {"course": "The Ultimate MySQL Bootcamp", "doc": "https://dev.mysql.com/doc/"}},
+      {"name": "MongoDB", "aliases": ["mongodb", "mongo"], "resources": {"course": "MongoDB Complete Developer Guide", "doc": "https://www.mongodb.com/docs/"}},
+      {"name": "Redis", "aliases": ["redis"], "resources": {"course": "Redis University - Fast Data", "doc": "https://redis.io/docs/"}},
+      {"name": "SQLite", "aliases": ["sqlite", "sqlite3"], "resources": {"course": "SQLite Tutorial", "doc": "https://www.sqlite.org/docs.html"}},
+      {"name": "Elasticsearch", "aliases": ["elasticsearch", "elastic search", "elk"], "resources": {"course": "Complete Guide to Elasticsearch", "doc": "https://www.elastic.co/guide/index.html"}},
+      {"name": "Cassandra", "aliases": ["cassandra", "apache cassandra"], "resources": {"course": "Apache Cassandra Essentials", "doc": "https://cassandra.apache.org/doc/latest/"}},
+      {"name": "DynamoDB", "aliases": ["dynamodb", "aws dynamodb"], "resources": {"course": "AWS DynamoDB Masterclass", "doc": "https://docs.aws.amazon.com/dynamodb/"}}
+    ],
+    "Cloud & DevOps": [
+      {"name": "AWS", "aliases": ["aws", "amazon web services", "ec2", "s3", "lambda"], "resources": {"course": "AWS Certified Solutions Architect", "doc": "https://aws.amazon.com/documentation/"}},
+      {"name": "Docker", "aliases": ["docker", "containerization"], "resources": {"course": "Docker Mastery: with Kubernetes", "doc": "https://docs.docker.com/"}},
+      {"name": "Kubernetes", "aliases": ["kubernetes", "k8s"], "resources": {"course": "Certified Kubernetes Administrator (CKA)", "doc": "https://kubernetes.io/docs/home/"}},
+      {"name": "Terraform", "aliases": ["terraform", "iac", "infrastructure as code"], "resources": {"course": "HashiCorp Certified: Terraform Associate", "doc": "https://developer.hashicorp.com/terraform/docs"}},
+      {"name": "CI/CD", "aliases": ["ci/cd", "ci cd", "continuous integration", "github actions", "jenkins"], "resources": {"course": "GitHub Actions & CI/CD Pipelines", "doc": "https://docs.github.com/en/actions"}},
+      {"name": "Azure", "aliases": ["azure", "microsoft azure"], "resources": {"course": "AZ-104 Microsoft Azure Administrator", "doc": "https://learn.microsoft.com/en-us/azure/"}},
+      {"name": "GCP", "aliases": ["gcp", "google cloud platform", "google cloud"], "resources": {"course": "GCP Associate Cloud Engineer", "doc": "https://cloud.google.com/docs"}},
+      {"name": "Nginx", "aliases": ["nginx"], "resources": {"course": "Nginx Fundamentals", "doc": "https://nginx.org/en/docs/"}},
+      {"name": "Linux", "aliases": ["linux", "ubuntu", "bash", "shell scripting"], "resources": {"course": "Linux Command Line Basics", "doc": "https://www.kernel.org/doc/html/latest/"}}
+    ],
+    "AI, ML & Data Science": [
+      {"name": "Machine Learning", "aliases": ["machine learning", "ml"], "resources": {"course": "Machine Learning Specialization by Andrew Ng", "doc": "https://scikit-learn.org/stable/"}},
+      {"name": "Deep Learning", "aliases": ["deep learning", "neural networks"], "resources": {"course": "Deep Learning Specialization (DeepLearning.AI)", "doc": "https://www.deeplearning.ai/"}},
+      {"name": "TensorFlow", "aliases": ["tensorflow", "tf"], "resources": {"course": "TensorFlow Developer Certificate", "doc": "https://www.tensorflow.org/learn"}},
+      {"name": "PyTorch", "aliases": ["pytorch", "torch"], "resources": {"course": "Deep Learning with PyTorch", "doc": "https://pytorch.org/docs/stable/index.html"}},
+      {"name": "Scikit-Learn", "aliases": ["scikit-learn", "sklearn"], "resources": {"course": "Python for Data Science & Machine Learning", "doc": "https://scikit-learn.org/"}},
+      {"name": "Pandas", "aliases": ["pandas"], "resources": {"course": "Data Analysis with Pandas", "doc": "https://pandas.pydata.org/docs/"}},
+      {"name": "NumPy", "aliases": ["numpy"], "resources": {"course": "NumPy Fundamentals", "doc": "https://numpy.org/doc/stable/"}},
+      {"name": "NLP", "aliases": ["nlp", "natural language processing"], "resources": {"course": "NLP with Python & Transformers", "doc": "https://huggingface.co/learn/nlp-course/"}},
+      {"name": "Computer Vision", "aliases": ["computer vision", "cv", "opencv"], "resources": {"course": "OpenCV & Computer Vision Masterclass", "doc": "https://docs.opencv.org/"}},
+      {"name": "LLMs & RAG", "aliases": ["llm", "large language models", "rag", "langchain", "llama", "openai api"], "resources": {"course": "LangChain & LLM App Development", "doc": "https://python.langchain.com/docs/"}}
+    ],
+    "Testing & Tools": [
+      {"name": "Git", "aliases": ["git", "github", "gitlab", "version control"], "resources": {"course": "Git & GitHub Complete Guide", "doc": "https://git-scm.com/doc"}},
+      {"name": "Jest", "aliases": ["jest"], "resources": {"course": "JavaScript Unit Testing with Jest", "doc": "https://jestjs.io/docs/getting-started"}},
+      {"name": "PyTest", "aliases": ["pytest"], "resources": {"course": "Python Testing with pytest", "doc": "https://docs.pytest.org/"}},
+      {"name": "Cypress", "aliases": ["cypress"], "resources": {"course": "Cypress End-to-End Testing", "doc": "https://docs.cypress.io/"}},
+      {"name": "Postman", "aliases": ["postman"], "resources": {"course": "Postman API Testing", "doc": "https://learning.postman.com/docs/"}},
+      {"name": "Jira", "aliases": ["jira", "confluence", "agile", "scrum"], "resources": {"course": "Agile Development with Jira", "doc": "https://www.atlassian.com/software/jira/guides"}}
+    ]
+  }
+}

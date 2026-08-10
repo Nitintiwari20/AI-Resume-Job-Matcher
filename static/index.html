@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Resume Job Matching & Skill Gap Analyzer</title>
+  <link rel="stylesheet" href="/static/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <div class="container">
+    <!-- Application Header -->
+    <header class="app-header">
+      <div class="brand">
+        <div class="brand-icon">
+          <i class="fa-solid fa-brain"></i>
+        </div>
+        <div>
+          <h1 class="brand-title">Smart Resume Analyzer</h1>
+          <div class="brand-subtitle">AI Job Fit Matching & Intelligent Skill Gap Roadmap Engine</div>
+        </div>
+      </div>
+      <div class="header-badges">
+        <div class="badge-tag pulse">FastAPI Backend Ready</div>
+        <div class="badge-tag"><i class="fa-solid fa-bolt"></i> TF-IDF NLP Engine</div>
+      </div>
+    </header>
+
+    <!-- Navigation Tabs -->
+    <nav class="tab-navigation">
+      <button class="nav-tab active" data-tab="tab-analyzer">
+        <i class="fa-solid fa-chart-pie"></i> Job Match & Skill Gap
+      </button>
+      <button class="nav-tab" data-tab="tab-recruiter">
+        <i class="fa-solid fa-users"></i> Recruiter Leaderboard
+      </button>
+      <button class="nav-tab" data-tab="tab-samples">
+        <i class="fa-solid fa-folder-open"></i> Sample Resumes Hub
+      </button>
+      <button class="nav-tab" data-tab="tab-bullet">
+        <i class="fa-solid fa-wand-magic-sparkles"></i> STAR Bullet Enhancer
+      </button>
+    </nav>
+
+    <!-- TAB 1: Smart Job Match & Skill Gap Analyzer -->
+    <section id="tab-analyzer" class="tab-content active">
+      <div class="grid-2">
+        <!-- Input Section -->
+        <div class="glass-card">
+          <h3 class="card-title"><i class="fa-solid fa-file-invoice"></i> Step 1: Input Resume & Target JD</h3>
+          
+          <!-- Input Mode Switch -->
+          <div class="form-group">
+            <label class="form-label">Resume Input Mode</label>
+            <div style="display: flex; gap: 0.5rem;">
+              <button id="mode-text-btn" class="btn-secondary active" style="flex: 1;">Paste Text</button>
+              <button id="mode-file-btn" class="btn-secondary" style="flex: 1;">Upload PDF/DOCX</button>
+            </div>
+          </div>
+
+          <!-- File Upload Zone -->
+          <div id="file-upload-container" class="form-group hidden">
+            <label class="form-label">Upload Resume File (.pdf, .docx, .txt)</label>
+            <div class="upload-zone" id="drop-zone">
+              <i class="fa-solid fa-cloud-arrow-up upload-icon"></i>
+              <p style="font-weight: 600; margin-bottom: 0.25rem;">Click to browse or drag & drop resume file</p>
+              <p style="font-size: 0.8rem; color: var(--text-muted);" id="file-selected-name">Supported: PDF, DOCX, TXT</p>
+              <input type="file" id="resume-file-input" accept=".pdf,.docx,.txt" style="display: none;">
+            </div>
+          </div>
+
+          <!-- Raw Text Container -->
+          <div id="text-input-container" class="form-group">
+            <label class="form-label">Paste Resume Content</label>
+            <textarea id="resume-text-input" class="form-textarea" placeholder="Paste full resume text here..."></textarea>
+          </div>
+
+          <!-- Job Description Selection -->
+          <div class="form-group">
+            <label class="form-label">Target Job Description (Preset or Custom)</label>
+            <select id="jd-preset-select" class="form-select" style="margin-bottom: 0.75rem;">
+              <option value="">-- Choose a Preset Benchmark Job Role --</option>
+            </select>
+            <textarea id="jd-text-input" class="form-textarea" placeholder="Paste target Job Description (JD) text here..."></textarea>
+          </div>
+
+          <button id="btn-run-match" class="btn-primary">
+            <i class="fa-solid fa-rocket"></i> Analyze Job Fit & Skill Gap
+          </button>
+        </div>
+
+        <!-- Dashboard Results Section -->
+        <div class="glass-card">
+          <h3 class="card-title"><i class="fa-solid fa-gauge-high"></i> Step 2: Match Intelligence & Skill Gap</h3>
+          
+          <div id="match-results-placeholder" style="text-align: center; padding: 4rem 1rem; color: var(--text-muted);">
+            <i class="fa-solid fa-chart-line" style="font-size: 3rem; opacity: 0.3; margin-bottom: 1rem;"></i>
+            <p>Upload a resume and target Job Description to generate full ATS, Match Score, and Skill Gap Analysis.</p>
+          </div>
+
+          <div id="match-results-container" class="hidden">
+            <!-- Score Cards Grid -->
+            <div class="score-summary-grid">
+              <div class="score-box green">
+                <div class="score-number" id="res-overall-score">0%</div>
+                <div class="score-label">Overall Fit Score</div>
+              </div>
+              <div class="score-box indigo">
+                <div class="score-number" id="res-skill-score">0%</div>
+                <div class="score-label">Skill Match</div>
+              </div>
+              <div class="score-box cyan">
+                <div class="score-number" id="res-semantic-score">0%</div>
+                <div class="score-label">NLP Context Sim</div>
+              </div>
+              <div class="score-box amber">
+                <div class="score-number" id="res-ats-score">0%</div>
+                <div class="score-label">ATS Compliance</div>
+              </div>
+            </div>
+
+            <!-- Skill Gap Matrix -->
+            <div style="margin-bottom: 1.5rem;">
+              <h4 style="font-size: 0.95rem; font-weight: 700; margin-bottom: 0.5rem;">
+                <i class="fa-solid fa-circle-check" style="color: var(--accent-green);"></i> Matched Skills (<span id="matched-count">0</span>)
+              </h4>
+              <div id="matched-skills-badges" class="skills-badge-container"></div>
+            </div>
+
+            <div style="margin-bottom: 1.5rem;">
+              <h4 style="font-size: 0.95rem; font-weight: 700; margin-bottom: 0.5rem;">
+                <i class="fa-solid fa-triangle-exclamation" style="color: var(--accent-rose);"></i> Skill Gap - Missing Skills (<span id="missing-count">0</span>)
+              </h4>
+              <div id="missing-skills-badges" class="skills-badge-container"></div>
+            </div>
+
+            <!-- Personalized Learning Roadmap -->
+            <div style="margin-top: 1.5rem;">
+              <h4 style="font-size: 1rem; font-weight: 700; margin-bottom: 0.75rem;">
+                <i class="fa-solid fa-graduation-cap" style="color: var(--accent-cyan);"></i> Personal Learning Action Plan & Roadmap
+              </h4>
+              <div id="roadmap-container" class="roadmap-timeline"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 2: Recruiter Leaderboard -->
+    <section id="tab-recruiter" class="tab-content hidden">
+      <div class="glass-card">
+        <h3 class="card-title"><i class="fa-solid fa-users-gear"></i> Batch Candidate Matching & Ranking</h3>
+        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">
+          Compare multiple candidates against a target Job Description to rank top applicants.
+        </p>
+
+        <div class="form-group">
+          <label class="form-label">Job Description for Ranking</label>
+          <textarea id="batch-jd-input" class="form-textarea" placeholder="Paste job description text to rank candidates against..."></textarea>
+        </div>
+
+        <button id="btn-run-batch" class="btn-primary" style="max-width: 300px; margin-bottom: 1.5rem;">
+          <i class="fa-solid fa-ranking-star"></i> Rank Sample Candidate Profiles
+        </button>
+
+        <div id="batch-results-container" class="hidden">
+          <h4 style="font-family: var(--font-heading); font-size: 1.1rem; font-weight: 700;">Candidate Leaderboard</h4>
+          <table class="leaderboard-table">
+            <thead>
+              <tr>
+                <th>Rank</th>
+                <th>Candidate Name</th>
+                <th>Overall Match Score</th>
+                <th>Skill Score</th>
+                <th>ATS Score</th>
+                <th>Key Matched Skills</th>
+                <th>Missing Skills</th>
+              </tr>
+            </thead>
+            <tbody id="leaderboard-body"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 3: Sample Resumes Hub -->
+    <section id="tab-samples" class="tab-content hidden">
+      <div class="glass-card">
+        <h3 class="card-title"><i class="fa-solid fa-folder-tree"></i> Benchmark Sample Resumes & Job Profiles</h3>
+        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">
+          Select any sample resume below to instantly load it into the analyzer.
+        </p>
+        <div id="samples-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.25rem;"></div>
+      </div>
+    </section>
+
+    <!-- TAB 4: STAR Bullet Enhancer -->
+    <section id="tab-bullet" class="tab-content hidden">
+      <div class="glass-card" style="max-width: 800px; margin: 0 auto;">
+        <h3 class="card-title"><i class="fa-solid fa-wand-magic-sparkles"></i> AI Bullet Point Optimizer (STAR Framework)</h3>
+        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">
+          Transform weak or routine resume bullet points into quantifiable high-impact statements.
+        </p>
+
+        <div class="form-group">
+          <label class="form-label">Your Weak / Draft Bullet Point</label>
+          <input type="text" id="bullet-input" class="form-input" placeholder="e.g. Worked on React UI components and fixed bugs">
+        </div>
+
+        <button id="btn-enhance-bullet" class="btn-primary">
+          <i class="fa-solid fa-bolt"></i> Enhance Bullet Point
+        </button>
+
+        <div id="bullet-result-container" class="bullet-box hidden">
+          <h4 style="font-size: 0.85rem; font-weight: 700; color: var(--accent-green); text-transform: uppercase; margin-bottom: 0.5rem;">
+            Enhanced STAR Framework Bullet:
+          </h4>
+          <p id="bullet-enhanced-text" style="font-size: 1.05rem; font-weight: 600; color: var(--text-main); margin-bottom: 1rem;"></p>
+          
+          <h5 style="font-size: 0.8rem; font-weight: 700; color: var(--text-muted);">Pro Tips for ATS Formatting:</h5>
+          <ul id="bullet-tips-list" style="font-size: 0.85rem; color: var(--text-muted); padding-left: 1.2rem; margin-top: 0.4rem;"></ul>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

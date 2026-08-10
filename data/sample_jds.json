@@ -1,0 +1,20 @@
+[
+  {
+    "id": "senior-fullstack",
+    "role_title": "Senior Full Stack Engineer (React, Node.js, Cloud)",
+    "company": "Apex Digital Global",
+    "description": "We are seeking an experienced Senior Full Stack Developer to build next-generation cloud platforms.\n\nKey Responsibilities:\n- Design, build, and maintain efficient, reusable frontend components using React and TypeScript.\n- Develop scalable backend microservices using Node.js, Express.js, and Python (FastAPI).\n- Design relational database models in PostgreSQL and caching strategies using Redis.\n- Deploy applications on AWS cloud using Docker, Kubernetes, and CI/CD pipelines (GitHub Actions).\n- Collaborate with product management, UI/UX designers, and QA teams using Agile/Scrum methodologies.\n\nRequired Qualifications & Skills:\n- 4+ years of professional full stack software development experience.\n- Strong proficiency in JavaScript, TypeScript, React, Node.js, and HTML5/CSS3.\n- Hands-on experience with PostgreSQL or MySQL and Redis.\n- Solid experience with Docker, AWS (S3, EC2), and CI/CD tools.\n- Familiarity with Next.js, GraphQL, and microservices architecture is a major plus.\n- Bachelor’s degree in Computer Science or equivalent work experience."
+  },
+  {
+    "id": "ai-data-scientist",
+    "role_title": "Senior AI / Machine Learning Engineer",
+    "company": "Cognitive Edge AI",
+    "description": "Join our AI research team to build cutting-edge Natural Language Processing (NLP) and Large Language Model (LLM) applications.\n\nRequirements:\n- Strong expertise in Python, PyTorch, Scikit-Learn, Pandas, NumPy, and SQL.\n- Experience in NLP, Transformers, LLMs (LangChain, HuggingFace), and model deployment.\n- Experience with FastAPI, Docker, MLOps (MLflow/SageMaker), and cloud services (AWS or GCP).\n- Familiarity with Vector Databases (Pinecone, ChromaDB) and RAG architecture.\n- MS or PhD in Computer Science, Data Science, or related quantitative field."
+  },
+  {
+    "id": "devops-cloud-lead",
+    "role_title": "DevOps & Cloud Systems Infrastructure Lead",
+    "company": "SkyNet Infrastructure Solutions",
+    "description": "Looking for a seasoned DevOps Cloud Engineer to manage enterprise AWS infrastructure, Kubernetes orchestration, and Terraform automated provisioning.\n\nRequirements:\n- Deep experience with AWS (EKS, EC2, IAM, VPC), Docker, Kubernetes, and Helm.\n- Strong proficiency in Infrastructure as Code (Terraform) and Configuration Management (Ansible).\n- Hands-on experience building CI/CD pipelines (GitHub Actions, Jenkins).\n- Knowledge of monitoring stacks: Prometheus, Grafana, ELK Stack.\n- Proficiency in Linux system administration and Python/Bash scripting."
+  }
+]
