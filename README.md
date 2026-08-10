@@ -1,10 +1,16 @@
-# AI Resume Job Matcher & Skill Gap Analyzer
+# 🤖 AI Resume Job Matcher & Skill Gap Analyzer
 
-A Complete End-to-End Machine Learning & Data Science System for Automated Resume Text Extraction, Skill Parsing, Vector Feature Engineering, ML Match Scoring, and Skill Gap Recommendations.
+> **A Complete End-to-End Machine Learning & Data Science System for Automated Resume Text Extraction, Skill Parsing, Vector Feature Engineering, ML Match Scoring, and Skill Gap Recommendations.**
 
 ---
 
-##  Project Directory Architecture
+## 📸 Dashboard Preview
+
+![AI Resume Job Matcher Dashboard](screenshots/Screenshot%202026-08-10%20195843.png)
+
+---
+
+## 📐 Project Directory Architecture
 
 ```text
 AI-Resume-Job-Matcher/
@@ -43,7 +49,7 @@ AI-Resume-Job-Matcher/
 
 ---
 
-##  System Flowchart & Pipeline Architecture
+## 🔄 System Flowchart & Pipeline Architecture
 
 ```text
                 RESUME
@@ -78,7 +84,7 @@ Strong Skills  Missing Skills Recommendation
 
 ---
 
-##  Step-by-Step Pipeline Description
+## 🛠️ Step-by-Step Pipeline Description
 
 1. **Text Extraction & Cleaning (`src/preprocessing.py`)**:
    - Supports PDF (`pypdf`), Word (`python-docx`), and raw text files.
@@ -102,7 +108,7 @@ Strong Skills  Missing Skills Recommendation
 
 ---
 
-##  How to Run the Project
+## 🚀 How to Run the Project
 
 ### 1. Install Dependencies
 ```bash
@@ -128,7 +134,7 @@ Open your browser at **[http://localhost:8000](http://localhost:8000)** to inter
 
 ---
 
-##  Docker Deployment
+## 🐳 Docker Deployment
 
 ```bash
 # Build image
@@ -137,6 +143,8 @@ docker build -t ai-resume-matcher .
 # Run container
 docker run -d -p 8000:8000 ai-resume-matcher
 ```
+
 ---
-##  License
+
+## 📄 License
 MIT License - Open Source & Human-Crafted ML Architecture.
