@@ -189,8 +189,8 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
 
-    const jdText = jdTextInput.value;
-    if (!resumeText.strip || !resumeText.trim() || !jdText.trim()) {
+    const jdText = jdTextInput.value || "";
+    if (!resumeText || !resumeText.trim() || !jdText || !jdText.trim()) {
       alert("Please provide both resume text (or file) and target job description.");
       btnRunMatch.innerHTML = `<i class="fa-solid fa-rocket"></i> Analyze Job Fit & Skill Gap`;
       return;
@@ -248,17 +248,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Learning Roadmap
     roadmapContainer.innerHTML = roadmap.map(r => `
-      <div class="roadmap-card ${r.priority}">
+      <div class="roadmap-card ${(r.priority || '').split(' ')[0]}">
         <div class="roadmap-header">
-          <div class="roadmap-skill">${r.step}. ${r.skill} (${r.category})</div>
-          <span class="priority-pill ${r.priority}">${r.priority} Priority (${r.estimated_time})</span>
+          <div class="roadmap-skill">${r.step || r.id || 1}. ${r.skill || r.missing_skill} (${r.category})</div>
+          <span class="priority-pill ${(r.priority || '').split(' ')[0]}">${r.priority} ${r.estimated_time ? '(' + r.estimated_time + ')' : ''}</span>
         </div>
         <div class="roadmap-details">
           <p><strong>Course:</strong> ${r.recommended_course}</p>
-          <p><strong>Project:</strong> ${r.hands_on_project}</p>
+          <p><strong>Project:</strong> ${r.hands_on_project || r.suggested_project}</p>
         </div>
         <div class="roadmap-links">
-          <a href="${r.documentation_link}" target="_blank" class="roadmap-link">
+          <a href="${r.documentation_link || r.documentation_url}" target="_blank" class="roadmap-link">
             <i class="fa-solid fa-book-open"></i> Documentation & Learning Link
           </a>
         </div>
