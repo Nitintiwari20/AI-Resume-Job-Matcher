@@ -6,7 +6,7 @@
 
 ## 📸 Dashboard Preview
 
-![AI Resume Job Matcher Dashboard](screenshots/Screenshot%202026-08-10%20195843.png)
+![AI Resume Job Matcher Dashboard](screenshots/Screenshot%202026-08-11%20094901.png)
 
 ---
 
