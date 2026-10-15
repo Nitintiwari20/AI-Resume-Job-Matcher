@@ -2,13 +2,17 @@
 
 > **A Complete End-to-End Machine Learning & Data Science System for Automated Resume Text Extraction, Skill Parsing, Vector Feature Engineering, ML Match Scoring, and Skill Gap Recommendations.**
 
+---
+
 ## 📸 Dashboard Preview
 
 ![AI Resume Job Matcher Dashboard](screenshots/Screenshot%202026-08-11%20094901.png)
 
+---
+
 ## 📐 Project Directory Architecture
 
-Text
+```text
 AI-Resume-Job-Matcher/
 │
 ├── data/
@@ -139,7 +143,6 @@ docker build -t ai-resume-matcher .
 # Run container
 docker run -d -p 8000:8000 ai-resume-matcher
 ```
-
 ---
 
 ## 📄 License
