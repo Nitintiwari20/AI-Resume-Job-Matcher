@@ -2,17 +2,13 @@
 
 > **A Complete End-to-End Machine Learning & Data Science System for Automated Resume Text Extraction, Skill Parsing, Vector Feature Engineering, ML Match Scoring, and Skill Gap Recommendations.**
 
----
-
 ## 📸 Dashboard Preview
 
 ![AI Resume Job Matcher Dashboard](screenshots/Screenshot%202026-08-11%20094901.png)
 
----
-
 ## 📐 Project Directory Architecture
 
-```text
+Text
 AI-Resume-Job-Matcher/
 │
 ├── data/
